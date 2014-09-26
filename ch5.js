@@ -89,12 +89,12 @@ function lifespan(person){
 function groupBy(array, func){
   var sorted = {};
 
-  array.forEach( function(i){
-    if ( !sorted.hasOwnProperty( func(array[i]) ) ) {
-      sorted[ func(array[i]) ] = [ array[i] ];
+  array.forEach( function(element, index){
+    if ( !sorted.hasOwnProperty( func(element) ) ) {
+      sorted[ func(element) ] = [ element ];
     }
     else {
-      sorted[ func(array[i]) ].push( array[i] );
+      sorted[ func(element) ].push( element );
     }
   });
 
@@ -103,6 +103,5 @@ function groupBy(array, func){
 
 byName.map(lifespan)
 
-
-// argh not working yet either. this stuff is confusing.
+// groupBy now works. haven't finished problem though.
 
