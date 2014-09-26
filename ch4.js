@@ -99,3 +99,34 @@ function listToArray(list) {
 
   return arr;
 }
+
+
+
+
+// Exercise 4: Deep Comparison
+
+function deepEqual(a,b) {
+  if (typeof(a) == "object" && typeof(b) == "object"){
+    if (a === null && b === null) {
+      return true;
+    }
+    else {
+      for (var i in a) {
+        if ( deepEqual(a[i],b[i]) ) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+    }
+  }
+  else if (a === b){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+// wow! can't believe that function actually worked.
