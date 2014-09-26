@@ -5,24 +5,24 @@
 // Exercise 1: The Sum of a Range
 
 function sum(arr) {
-   var sum = 0;
-   for ( var i = 0; i < arr.length ; i++) {
-      sum += arr[i];
-   }
-   return sum;
+  var sum = 0;
+  for ( var i = 0; i < arr.length ; i++) {
+    sum += arr[i];
+  }
+  return sum;
 }
 
 
 // needs adjustment to work for negative steps
 
 function range(start,end,step) {
-   var arr = [];
-   if ( step == undefined) { var step = 1 };
+  var arr = [];
+  if ( step == undefined) { var step = 1 };
 
-   for ( var i = 0; i - 1 < (end - start); i += step ) {
-       arr.push(start + i);
-   }
-   return arr;
+  for ( var i = 0; i - 1 < (end - start); i += step ) {
+    arr.push(start + i);
+  }
+    return arr;
 }
 
 
@@ -31,12 +31,12 @@ function range(start,end,step) {
 // Exercise 2: Reversing an Array
 
 function reverseArray(arr) {
-   var newArray = [];
-   for (var i = 0; i < arr.length ; i++ ) {
-      newArray.unshift(arr[i]);
-   }
+  var newArray = [];
+  for (var i = 0; i < arr.length ; i++ ) {
+    newArray.unshift(arr[i]);
+  }
 
-   return newArray;
+  return newArray;
 
 }
 
