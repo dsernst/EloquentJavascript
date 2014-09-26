@@ -44,12 +44,12 @@ function reverseArray(arr) {
 // This one doesn't seem to work correctly:
 
 function reverseArrayInPlace(arr) {
-   var newArray = [];
-   for (var i = 0; i < arr.length ; i++ ) {
-      newArray.unshift(arr[i]);
-   }
+  var newArray = [];
+  for (var i = 0; i < arr.length ; i++ ) {
+    newArray.unshift(arr[i]);
+  }
 
-   arr = newArray;
+  arr = newArray;
 
 }
 
@@ -57,17 +57,45 @@ function reverseArrayInPlace(arr) {
 
 // Exercise 3: A List
 
-function prepend (element, current) {
+function prepend(element, current) {
   return {value: element, rest: current}
-      }
+}
 
 
 function arrayToList(arr) {
-   var list = {value: arr[arr.length - 1] , rest: null };
+  var list = {value: arr[arr.length - 1] , rest: null };
    
-   for (i = 1; i < arr.length ; i++ ) {
-      list = prepend( arr[arr.length - 1 - i] , list);
-   }
+  for (i = 1; i < arr.length ; i++ ) {
+    list = prepend( arr[arr.length - 1 - i] , list);
+  }
 
-   return list;
+  return list;
+}
+
+
+function nth(list, number) {
+  if (list === null) {
+    return undefined;
+  }
+  else if (number == 0) {
+    return list.value;
+  }
+  else {
+    return nth(list.rest, number - 1);
+  }
+}
+
+
+function listToArray(list) {
+  var arr = [];
+  var i = 0;
+  var x = nth(list, i) ;
+
+  while (x !== undefined) {
+    arr.push(x);
+    i++;
+    x = nth(list, i);
+  }
+
+  return arr;
 }
