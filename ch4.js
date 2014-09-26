@@ -130,3 +130,11 @@ function deepEqual(a,b) {
 }
 
 // wow! can't believe that function actually worked.
+
+// errr, although this passed the book's listed tests,
+// after reading the book's hint, my gut says this has
+// some issues:
+//
+// * might return true too often, creating false positives
+// * doesn't check if obj b has *more* properties than a
+// * null could use === test
