@@ -17,7 +17,7 @@ function sum(arr) {
 
 function range(start,end,step) {
    var arr = [];
-   if ( step == undefined) { var step = 1 );
+   if ( step == undefined) { var step = 1 };
 
    for ( var i = 0; i - 1 < (end - start); i += step ) {
        arr.push(start + i);
